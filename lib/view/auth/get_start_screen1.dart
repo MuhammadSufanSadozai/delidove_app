@@ -1,5 +1,7 @@
 import 'package:delidove_app/utils/export_lib.dart';
-import 'package:flutter/cupertino.dart';
+
+import 'package:get/get.dart';
+
 
 export 'package:delidove_app/view/auth/get_start_screen1.dart';
 
@@ -51,7 +53,7 @@ class _GetStart1State extends State<GetStart1> {
                             Checkbox(
                               value: isChecked,
                               onChanged: (bool? value) {
-                                setState(() {
+                                (() {
                                   isChecked = value ?? false;
                                 });
                               },
@@ -65,10 +67,10 @@ class _GetStart1State extends State<GetStart1> {
                         ),
 
 
-                        GestureDetector(
-                        onTap: (){
-                          Navigator.pop(context);
-                        },
+                            GestureDetector(
+                              onTap: () {
+                                Get.back();
+                              },
 
                           child :  Icon(
                             Icons.clear,

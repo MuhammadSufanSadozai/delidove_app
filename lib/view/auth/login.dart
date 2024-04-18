@@ -4,6 +4,8 @@ import 'package:delidove_app/view/auth/signUp_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../widgets/Btnwidget.dart';
 import '../../widgets/signinoptionswidget.dart';
@@ -69,10 +71,8 @@ class _LoginState extends State<Login> {
                          child:  BtnWidget(
 
                              onpress: (){
-                               Navigator.push(
-                                 context,
-                                 MaterialPageRoute(builder: (context) => DashBoard()),
-                               );
+                               Get.to(() =>  DashBoard());
+
                              }, btntext: "Login"),
                        ),
                        SizedBox(height: 30,),
@@ -82,10 +82,7 @@ class _LoginState extends State<Login> {
                            Text('Dont have an Account ? ',style: TextStyle(color: black1),),
                            GestureDetector(
                                onTap: (){
-                                 Navigator.pushReplacement(
-                                   context,
-                                   MaterialPageRoute(builder: (context) => SignUpScreen()),
-                                 );
+                                 Get.to(() => SignUpScreen());
                                },
 
                                child: Text('Sign up',style: TextStyle(color: appColor),)),

@@ -2,6 +2,7 @@
 
 import 'package:delidove_app/utils/export_lib.dart';
 import 'package:delidove_app/view/auth/login.dart';
+import 'package:get/get.dart';
 
 import '../../widgets/Btnwidget.dart';
 import '../../widgets/signinoptionswidget.dart';
@@ -66,10 +67,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           child:  BtnWidget(
 
                               onpress: (){
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => Login()),
-                                );
+                                Get.to(() => Login());
+                               
                               },
 
                               btntext: "Sign Up "),

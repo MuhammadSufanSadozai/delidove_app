@@ -4,6 +4,7 @@ import 'package:delidove_app/view/auth/get_start_screen1.dart';
 import 'package:delidove_app/view/auth/login.dart';
 import 'package:delidove_app/widgets/Btnwidget.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 
 class GetStart extends StatefulWidget {
   const GetStart({Key? key}) : super(key: key);
@@ -56,14 +57,12 @@ class _GetStartState extends State<GetStart> {
                         ),
                       ),
                       SizedBox(height: 40),
-                      BtnWidget(
-            
-                          onpress: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Login()),
-                        );
+                    BtnWidget(
+                      onpress: () {
+                        Get.to(() =>  Login()); // Navigate to the login screen using GetX
                       }, btntext: "START"),
+
+
             
                       SizedBox(height: 40),
                       Row(
@@ -80,10 +79,10 @@ class _GetStartState extends State<GetStart> {
                           ),
                           GestureDetector(
                               onTap: (){
-                                Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => GetStart1()),
-                                );
+
+                                Get.to(() =>  GetStart1());
+
+
                               },
                               child: Text('Terms & Conditions ', style: TextStyle(color: Greycclr))),
                         ],

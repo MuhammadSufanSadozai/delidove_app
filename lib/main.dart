@@ -2,7 +2,7 @@ import 'package:delidove_app/utils/export_lib.dart';
 import 'package:delidove_app/view/auth/dashBoard_1.dart';
 import 'package:delidove_app/view/auth/get_start_Screen.dart';
 import 'package:delidove_app/view/auth/login.dart';
-
+import 'package:get/get.dart';
 
  void main(){
 
@@ -15,7 +15,7 @@ import 'package:delidove_app/view/auth/login.dart';
 
    @override
    Widget build(BuildContext context) {
-     return MaterialApp(
+     return GetMaterialApp(
        debugShowCheckedModeBanner: false,
        home: SplashScreen(
 
